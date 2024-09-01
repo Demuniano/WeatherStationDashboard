@@ -3,30 +3,15 @@ import React from 'react';
 import Widget from '../components/Widget';
 import Clock from '../components/Clock';
 import TemperatureMeter from '../components/TemperatureMeter';
+import DasboardMenu from './DashboardMenu';
 
 function Dashboard() {
   return (
     <div className="flex h-screen bg-gradient-to-t from-slate-100 to-blue-300">
-      {/* Sidebar */}
-      <aside className="w-64 bg-gray-600 text-white p-6">
-        <h2 className="text-2xl font-bold mb-6">Dashboard</h2>
-        <ul>
-          <li className="mb-4">
-            <a href="#" className="hover:text-gray-400">Home</a>
-          </li>
-          <li className="mb-4">
-            <a href="#" className="hover:text-gray-400">Reports</a>
-          </li>
-          <li className="mb-4">
-            <a href="#" className="hover:text-gray-400">Settings</a>
-          </li>
-        </ul>
-      </aside>
-
-      {/* Main Content */}
       <main className="flex-1 p-6">
-        <div className='bg-gradient-to-r from-indigo-500 to-sky-500 shadow-xl rounded-md p-4 mb-4'>
+        <div className='flex bg-gradient-to-r from-indigo-500 to-sky-500 shadow-xl rounded-md p-4 mb-4 justify-between'>
           <h1 className="text-3xl font-bold text-white">Dashboard Overview</h1>
+          <DasboardMenu/>
         </div>
         
         {/* Data Widgets */}
