@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Backend-COM/node_modules/
+
+# Ignorar package-lock.json dentro de Backend-COM
+Backend-COM/package-lock.json
+
+# Ignorar otros archivos y carpetas no deseados
+Backend-COM/npm-debug.log*
+Backend-COM/yarn-debug.log*
+Backend-COM/yarn-error.log*
+
+# Archivos de configuración específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración específicos del editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de construcción
+Backend-COM/dist/
+Backend-COM/build/
+
+# Archivos de cobertura de pruebas
+Backend-COM/coverage/
+Backend-COM/.nyc_output/
