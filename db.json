@@ -1,0 +1,13 @@
+{
+    "datosTemperatura": [
+        {
+            "date":"2024-08-31",
+            "time":"23:03:50",
+            "station_sk":"Station-01",
+            "humidity":"61.00",
+            "pressure":"802.38",
+            "temperature":"23.80",
+            "altitude":"1925.31"
+        }
+    ]
+}
