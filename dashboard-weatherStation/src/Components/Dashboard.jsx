@@ -1,8 +1,8 @@
 // src/pages/Dashboard.jsx
 import React, { useEffect, useState } from 'react';
-import Widget from '../components/Widget';
-import Clock from '../components/Clock';
-import TemperatureMeter from '../components/TemperatureMeter';
+import Widget from './Widget';
+import Clock from './Clock';
+import TemperatureMeter from './TemperatureMeter';
 import DasboardMenu from './DashboardMenu';
 function Dashboard() {
 
