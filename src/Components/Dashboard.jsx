@@ -7,15 +7,15 @@ import DasboardMenu from './DashboardMenu';
 
 function Dashboard() {
   return (
-    <div className="flex h-screen bg-gradient-to-t from-slate-100 to-blue-300">
+    <div className="h-screen">
       <main className="flex-1 p-6">
-        <div className='flex bg-gradient-to-r from-indigo-500 to-sky-500 shadow-xl rounded-md p-4 mb-4 justify-between'>
+        <div className='bg-gradient-to-r from-indigo-500 to-sky-500 shadow-xl rounded-md p-8 mb-4 md:flex justify-between'>
           <h1 className="text-3xl font-bold text-white">Dashboard Overview</h1>
           <DasboardMenu/>
         </div>
         
         {/* Data Widgets */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-64">
           <Clock />
           <TemperatureMeter temperature={23.80} />
           <Widget title="Station SK" value="Station-01" />

@@ -8,11 +8,10 @@ export default function DasboardMenu() {
     <div className="relative inline-block text-left">
         <div>
             <button
-             className="inline-flex justify-center w-full
-            rounded-md font-bold text-3xl text-white hover:text-black cursor-pointer"
+             className="inline-flex justify-center w-full rounded-md font-bold text-3xl text-white hover:text-black cursor-pointer"
             onClick={() => setAbierto(!abierto)}
             >
-                Menu
+              Menu
             </button>
         </div>
 
