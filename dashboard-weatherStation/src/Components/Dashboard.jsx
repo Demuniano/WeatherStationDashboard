@@ -4,17 +4,8 @@ import Widget from '../components/Widget';
 import Clock from '../components/Clock';
 import TemperatureMeter from '../components/TemperatureMeter';
 import DasboardMenu from './DashboardMenu';
-import { Obtenerdatos } from '../api/datos';
 function Dashboard() {
-  const [datos, setDatos] = useState({})
-  useEffect(() => {
-    const cargarDatos = async () => {
-      const resultado = await Obtenerdatos();
-      console.log(resultado); // Agrega este console.log()
-      setDatos(resultado);
-    };
-    cargarDatos();
-  }, []);
+
   return (
     <div className="h-screen">
       <main className="flex-1 p-6">
