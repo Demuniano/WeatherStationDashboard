@@ -1,14 +1,10 @@
-// src/components/Widget.jsx
 import React from 'react';
 
-function Widget({ title, value, unit = '' }) {
+function Widget({ title, children }) {
   return (
-    <div className="bg-white p-4 rounded shadow-md">
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-xl">
-        {value}
-        {unit && <span className="text-sm ml-1">{unit}</span>}
-      </p>
+    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-lg flex flex-col items-center">
+      <h3 className="text-xl font-bold mb-4 text-gray-300">{title}</h3>
+      {children}
     </div>
   );
 }

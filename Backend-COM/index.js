@@ -1,9 +1,15 @@
 const express = require('express');
+const cors = require('cors'); // Importa cors
 const { SerialPort } = require('serialport');
 const { ReadlineParser } = require('@serialport/parser-readline');
 
 const app = express();
 const port = 3000;
+
+// Configura CORS para permitir solicitudes solo desde http://localhost:5173
+app.use(cors({
+  origin: 'http://localhost:5173'
+}));
 
 // Variable para almacenar los últimos datos recibidos
 let latestData = 'No data received yet';

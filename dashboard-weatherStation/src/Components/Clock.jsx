@@ -1,21 +1,28 @@
-// src/components/Clock.jsx
 import React, { useState, useEffect } from 'react';
 
 function Clock() {
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
+  const [time, setTime] = useState('');
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(new Date().toLocaleTimeString());
-    }, 1000); // Actualiza la hora cada segundo
+    const updateClock = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const period = hours >= 12 ? 'PM' : 'AM';
+      const formattedHours = hours % 12 || 12;
+      const formattedMinutes = minutes.toString().padStart(2, '0');
+      setTime(`${formattedHours}:${formattedMinutes} ${period}`);
+    };
+
+    updateClock(); // Inicializa el tiempo al cargar el componente
+    const timer = setInterval(updateClock, 1000); // Actualiza la hora cada segundo
 
     return () => clearInterval(timer); // Limpia el intervalo al desmontar el componente
   }, []);
 
   return (
-    <div className="bg-white p-4 rounded shadow-md text-center">
-      <h3 className="text-lg font-semibold mb-2">Current Time</h3>
-      <p className="text-2xl">{time}</p>
+    <div className="flex items-center justify-center h-full">
+      <p className="text-4xl font-mono tracking-wide">{time}</p>
     </div>
   );
 }

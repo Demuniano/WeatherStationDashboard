@@ -1,27 +1,43 @@
-// src/pages/Dashboard.jsx
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Widget from './Widget';
 import Clock from './Clock';
 import TemperatureMeter from './TemperatureMeter';
-import DasboardMenu from './DashboardMenu';
-function Dashboard() {
+import DashboardMenu from './DashboardMenu';
+import Label from './Label';
+import '../css/Dashboard.css'; 
 
+// Modifica el componente para aceptar props de datos
+function Dashboard({ data }) {
   return (
-    <div className="h-screen">
-      <main className="flex-1 p-6">
-        <div className='bg-gradient-to-r from-indigo-500 to-sky-500 shadow-xl rounded-md p-8 mb-4 md:flex justify-between'>
-          <h1 className="text-3xl font-bold text-white">Dashboard Overview</h1>
-          <DasboardMenu/>
+    <div className="dashboard-container">
+      <main className="dashboard-main">
+        <div className="dashboard-header bg-gray-900 text-white p-4 rounded-lg shadow-lg">
+          <h1 className="dashboard-title text-3xl font-bold">
+            Panel de Control
+          </h1>
+          <DashboardMenu className="dashboard-menu" />
         </div>
         
         {/* Data Widgets */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-36">
-          <Clock />
-          <TemperatureMeter temperature={23.80} />
-          <Widget title="Station SK" value="Station-01" />
-          <Widget title="Humidity" value="61.00" unit="%" />
-          <Widget title="Pressure" value="802.38" unit="hPa" />
-          <Widget title="Altitude" value="1925.31" unit="meters" />
+        <div className="widget-container">
+          <Widget title="Hora">
+            <Clock />
+          </Widget>
+          <Widget title="Temperatura">
+            <TemperatureMeter temperature={data.temperature} />
+          </Widget>
+          <Widget title="Estación SK">
+            <Label text={data.station} />
+          </Widget>
+          <Widget title="Humedad">
+            <Label text={`${data.humidity}%`} />
+          </Widget>
+          <Widget title="Presión">
+            <Label text={`${data.pressure} hPa`} />
+          </Widget>
+          <Widget title="Altitud">
+            <Label text={`${data.altitude} meters`} />
+          </Widget>
         </div>
       </main>
     </div>

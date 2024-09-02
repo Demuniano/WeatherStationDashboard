@@ -11,7 +11,7 @@ export default function DasboardMenu() {
              className="inline-flex justify-center w-full rounded-md font-bold text-3xl text-white hover:text-cyan-200 cursor-pointer mr-40"
             onClick={() => setAbierto(!abierto)}
             >
-              Menu
+              Menú
             </button>
         </div>
 

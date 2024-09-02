@@ -1,0 +1,74 @@
+/* Estilo para el contenedor principal */
+.dashboard-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Estilo para el área principal */
+.dashboard-main {
+  flex: 1;
+  padding: 1rem; /* Ajuste en unidades relativas */
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #333333; /* Texto gris oscuro */
+}
+
+/* Estilo para el contenedor del encabezado */
+.dashboard-header {
+  background: linear-gradient(to right, #051f44, #5305cf); /* Degradado de azul fuerte a morado oscuro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  border-radius: 0.5rem; /* Bordes más redondeados */
+  padding: 1.5rem 2rem; /* Mayor espacio interno */
+  margin-bottom: 1.5rem; /* Espaciado en la parte inferior */
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos en el header */
+  justify-content: space-between; /* Distribuye espacio entre el título y el menú */
+  max-width: 100%;
+}
+
+/* Estilo para el título del encabezado */
+.dashboard-title {
+  font-size: 2rem; /* Tamaño de fuente más grande */
+  color: #f8f9fa; /* Texto en color claro (casi blanco) */
+  font-weight: 700; /* Texto en negrita más fuerte */
+  text-align: left; /* Alineación a la izquierda */
+  width: 100%;
+}
+
+
+/* Estilo para el menú del encabezado */
+.dashboard-menu {
+  margin-left: auto; /* Mueve el menú a la derecha */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Estilo para los widgets */
+.widget-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Una columna en pantallas pequeñas */
+  gap: 1rem; /* Espaciado entre los elementos */
+  margin-top: 1rem; /* Espaciado en la parte superior */
+}
+
+@media (min-width: 640px) {
+  .widget-container {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .widget-container {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+  }
+}
+
+/* Estilo para los widgets */
+.widget {
+  background-color: #f0f4f8; /* Fondo gris claro */
+  border: 1px solid #e2e8f0; /* Borde gris muy claro */
+  padding: 1rem; /* Ajuste en unidades relativas */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  color: #333333; /* Texto gris oscuro */
+}
